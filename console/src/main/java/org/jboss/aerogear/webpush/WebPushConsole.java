@@ -18,7 +18,7 @@ import org.jboss.aesh.terminal.Color.Intensity;
 import org.jboss.aesh.terminal.TerminalColor;
 import org.jboss.aesh.terminal.TerminalString;
 
-import java.io.IOException;
+import org.jboss.aesh.console.command.CommandException;
 
 import static org.jboss.aesh.terminal.Color.DEFAULT;
 import static org.jboss.aesh.terminal.Color.GREEN;
@@ -72,7 +72,7 @@ public class WebPushConsole {
     public static class ExitCommand implements Command {
 
         @Override
-        public CommandResult execute(final CommandInvocation commandInvocation) throws IOException, InterruptedException {
+        public CommandResult execute(final CommandInvocation commandInvocation) throws CommandException, InterruptedException {
             commandInvocation.stop();
             return CommandResult.SUCCESS;
         }
@@ -93,7 +93,7 @@ public class WebPushConsole {
         private int port;
 
         @Override
-        public CommandResult execute(final CommandInvocation commandInvocation) throws IOException, InterruptedException {
+        public CommandResult execute(final CommandInvocation commandInvocation) throws CommandException, InterruptedException {
             if (help) {
                 commandInvocation.getShell().out().println(commandInvocation.getHelpInfo("connect"));
             } else {
@@ -138,7 +138,7 @@ public class WebPushConsole {
         }
 
         @Override
-        public CommandResult execute(final CommandInvocation commandInvocation) throws IOException, InterruptedException {
+        public CommandResult execute(final CommandInvocation commandInvocation) throws CommandException, InterruptedException {
             if (help) {
                 commandInvocation.getShell().out().println(commandInvocation.getHelpInfo("disconnect"));
             } else {
@@ -174,7 +174,7 @@ public class WebPushConsole {
         }
 
         @Override
-        public CommandResult execute(final CommandInvocation commandInvocation) throws IOException, InterruptedException {
+        public CommandResult execute(final CommandInvocation commandInvocation) throws CommandException, InterruptedException {
             if (help) {
                 commandInvocation.getShell().out().println(commandInvocation.getHelpInfo("subscribe"));
             } else {
@@ -211,7 +211,7 @@ public class WebPushConsole {
         }
 
         @Override
-        public CommandResult execute(final CommandInvocation commandInvocation) throws IOException, InterruptedException {
+        public CommandResult execute(final CommandInvocation commandInvocation) throws CommandException, InterruptedException {
             if (help) {
                 commandInvocation.getShell().out().println(commandInvocation.getHelpInfo("receipt"));
             } else {
@@ -257,7 +257,7 @@ public class WebPushConsole {
         }
 
         @Override
-        public CommandResult execute(final CommandInvocation commandInvocation) throws IOException, InterruptedException {
+        public CommandResult execute(final CommandInvocation commandInvocation) throws CommandException, InterruptedException {
             if (help) {
                 commandInvocation.getShell().out().println(commandInvocation.getHelpInfo("notify"));
             } else {
@@ -297,7 +297,7 @@ public class WebPushConsole {
         }
 
         @Override
-        public CommandResult execute(final CommandInvocation commandInvocation) throws IOException, InterruptedException {
+        public CommandResult execute(final CommandInvocation commandInvocation) throws CommandException, InterruptedException {
             if (help) {
                 commandInvocation.getShell().out().println(commandInvocation.getHelpInfo("monitor"));
             } else {
@@ -332,7 +332,7 @@ public class WebPushConsole {
       }
 
       @Override
-      public CommandResult execute(final CommandInvocation commandInvocation) throws IOException, InterruptedException {
+      public CommandResult execute(final CommandInvocation commandInvocation) throws CommandException, InterruptedException {
           if(help) {
               commandInvocation.getShell().out().println(commandInvocation.getHelpInfo("ack"));
           } else {
@@ -367,7 +367,7 @@ public class WebPushConsole {
         }
 
         @Override
-        public CommandResult execute(final CommandInvocation commandInvocation) throws IOException, InterruptedException {
+        public CommandResult execute(final CommandInvocation commandInvocation) throws CommandException, InterruptedException {
             if (help) {
                 commandInvocation.getShell().out().println(commandInvocation.getHelpInfo("monitor"));
             } else {
@@ -404,7 +404,7 @@ public class WebPushConsole {
         }
 
         @Override
-        public CommandResult execute(final CommandInvocation commandInvocation) throws IOException, InterruptedException {
+        public CommandResult execute(final CommandInvocation commandInvocation) throws CommandException, InterruptedException {
             if (help) {
                 commandInvocation.getShell().out().println(commandInvocation.getHelpInfo("delete"));
             } else {

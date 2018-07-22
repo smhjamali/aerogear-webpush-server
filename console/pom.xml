@@ -37,7 +37,7 @@
     </licenses>
 
     <properties>
-        <java.version>1.7</java.version>
+        <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -84,13 +84,13 @@
                         <configuration>
                             <groupId>org.mortbay.jetty.alpn</groupId>
                             <artifactId>alpn-boot</artifactId>
-                            <version>8.1.7.v20160121</version>
+                            <version>8.1.12.v20180117</version>
                             <outputDirectory>${project.build.directory}/libs</outputDirectory>
                             <artifactItems>
                               <artifactItem>
                                 <groupId>org.mortbay.jetty.alpn</groupId>
                                 <artifactId>alpn-boot</artifactId>
-                                <version>8.1.0.v20141016</version>
+                                <version>8.1.12.v20180117</version>
                               </artifactItem>
                             </artifactItems>
                         </configuration>
@@ -100,7 +100,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>1.2.1</version>
+                <version>${version.exec-maven-plugin}</version>
                 <configuration>
                     <executable>${java.home}/bin/java</executable>
                     <arguments>
@@ -182,7 +182,7 @@
         <dependency>
             <groupId>org.jboss.aesh</groupId>
             <artifactId>aesh</artifactId>
-            <version>0.56</version>
+            <version>0.66.19</version>
             <scope>compile</scope>
         </dependency>
 

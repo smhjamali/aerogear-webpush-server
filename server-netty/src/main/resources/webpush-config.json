@@ -1,10 +1,11 @@
 {
     "host": "localhost",
-    "port": 8443,
-    "cert": "/selfsigned.crt",
-    "privateKey": "/demo.key",
+    "port": 7443,
+    "cert": "/localhost.crt",
+    "privateKey": "/localhost.key",
     "endpoint-tls": true,
     "endpoint-host": "localhost",
-    "password": "ChangeMe!!!!",
+    "endpoint-port": 7443,
+    "password": "changeit",
     "datastore": { "in-memory": {} }
 }
